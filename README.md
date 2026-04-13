@@ -8,18 +8,42 @@ COCOON enables running AI models in trusted execution environments, while earnin
 
 This repository contains all the necessary tools and documentation to both serve and access models via COCOON.
 
-## Quick Links
+## What You Can Do with COCOON
 
-**For Workers:**
-offering GPUs for computation
+### 🖥️ Run a Worker — Earn TON with Your GPU
+
+If you have a server with an NVIDIA H100+ GPU and Intel TDX support, you can run a COCOON worker and earn TON cryptocurrency by serving AI inference requests.
 
 - **Download**: [Latest worker release](https://ci.cocoon.org/cocoon-worker-release-latest.tar.xz) – Ready-to-run TDX image and setup scripts
-- **Setup Guide**: Instructions are included in the release archive ([preview here](scripts/dist-worker/README.md))
+- **Setup Guide**: Full instructions in the release archive ([preview here](scripts/dist-worker/README.md))
 
-**For Developers:**
-requiring secure AI compute
+### 🤖 Build Apps — Access Secure AI Inference
 
-- **Build Instructions**: See below for reproducing worker distribution from source
+If you are a developer who wants to use COCOON's verifiable, privacy-preserving AI inference in your application:
+
+- Send inference requests through the COCOON client via any proxy endpoint
+- Payments are handled automatically through TON smart contracts
+- All prompts and responses remain private (only visible to your client)
+- You can cryptographically verify that the correct model processed your request
+- **Developer Guide**: See [docs/developer-guide.md](docs/developer-guide.md) for integration instructions
+
+### 🔍 Verify — Reproduce Builds and Audit the System
+
+Anyone can verify that the published worker images match the open-source code:
+
+- **Reproducible builds**: Rebuild the worker image from source and compare hashes (see below)
+- **Smart contracts**: The on-chain registry is public and auditable
+- **Technical documentation**: See [docs/](docs/) for architecture, security model, and more
+
+### 🛠️ Contribute — Extend the Platform
+
+The full source code is available for developers who want to run proxies, extend the protocol, or contribute:
+
+- Build and run all components locally with `./scripts/cocoon-launch --local-all`
+- Explore the [technical docs](docs/) for architecture details
+- See [Deployment guide](docs/deployment.md) for use cases from local testing to production
+
+---
 
 ## Reproducible Build
 
